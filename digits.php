@@ -28,7 +28,7 @@ function digitCountHardVariant(int $input): int
     $digits = 0;
 
     //Пока в $input число большее чем 1, делим на 10 и увеличиваем количество цифр
-    while ($input > 1) {
+    while ($input >= 1) {
         $input = $input / 10;
         $digits++;
     }
@@ -38,6 +38,8 @@ function digitCountHardVariant(int $input): int
 
 //Тестовый набор данных, первый элемент - число которое подадим в функцию, второй - то что ожидаем от неё получить
 $testData = [
+    [100, 3],
+    [1000, 4],
     [-25115, 5],
     [PHP_INT_MAX, 19],
     [25, 2],
